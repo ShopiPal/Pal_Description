@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="pal_description_package">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000791 -0.00018243 0.30716"
+        rpy="0 0 0" />
+      <mass
+        value="12.301" />
+      <inertia
+        ixx="0.2473"
+        ixy="-8.7263E-06"
+        ixz="-0.0004377"
+        iyy="0.27773"
+        iyz="3.5306E-07"
+        izz="0.42822" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="laser_link">
+    <inertial>
+      <origin
+        xyz="0.0057843 0.00049511 -0.019562"
+        rpy="0 0 0" />
+      <mass
+        value="0.14299" />
+      <inertia
+        ixx="4.6277E-05"
+        ixy="-8.5357E-07"
+        ixz="3.6218E-06"
+        iyy="7.3475E-05"
+        iyz="-2.043E-07"
+        izz="0.00010796" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/laser_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.10196 0.10196 0.10196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/laser_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_laser_link"
+    type="fixed">
+    <origin
+      xyz="-0.2295 0 0.4606"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar_back">
+    <inertial>
+      <origin
+        xyz="-0.0093348 -5.1266E-05 0.0024606"
+        rpy="0 0 0" />
+      <mass
+        value="0.0127" />
+      <inertia
+        ixx="2.9958E-06"
+        ixy="-3.2563E-14"
+        ixz="6.0937E-07"
+        iyy="2.5484E-06"
+        iyz="3.54E-14"
+        izz="3.6718E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_back.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_back.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_sonar_back"
+    type="fixed">
+    <origin
+      xyz="-0.28 0 0.3855"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar_back" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar_right">
+    <inertial>
+      <origin
+        xyz="-0.00933477415816641 -5.12662968424338E-05 0.00246059497188117"
+        rpy="0 0 0" />
+      <mass
+        value="0.0127001779820879" />
+      <inertia
+        ixx="2.99583454710812E-06"
+        ixy="-3.25634412577514E-14"
+        ixz="6.09366105296659E-07"
+        iyy="2.54843474812641E-06"
+        iyz="3.53999405188081E-14"
+        izz="3.67179403191029E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_sonar_right"
+    type="fixed">
+    <origin
+      xyz="-0.20375 -0.25 0.3855"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar_right_front">
+    <inertial>
+      <origin
+        xyz="-0.00933477420196571 -5.12663004713643E-05 0.00246059506440671"
+        rpy="0 0 0" />
+      <mass
+        value="0.0127001779018216" />
+      <inertia
+        ixx="2.99583454715613E-06"
+        ixy="-3.25666274648268E-14"
+        ixz="6.09366105293019E-07"
+        iyy="2.54843474806314E-06"
+        iyz="3.54128534283303E-14"
+        izz="3.67179403199938E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_right_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_right_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_sonar_right_front"
+    type="fixed">
+    <origin
+      xyz="0.0033527 -0.23285 0.3855"
+      rpy="0 0 -0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar_right_front" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar_front">
+    <inertial>
+      <origin
+        xyz="-0.00933477415887563 -0.000993461646065619 0.00246059497383683"
+        rpy="0 0 0" />
+      <mass
+        value="0.0127001779806578" />
+      <inertia
+        ixx="2.99583454710788E-06"
+        ixy="-3.25634031114903E-14"
+        ixz="6.09366105296714E-07"
+        iyy="2.54843474812621E-06"
+        iyz="3.53999544496893E-14"
+        izz="3.67179403191023E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_sonar_front"
+    type="fixed">
+    <origin
+      xyz="0.28 0.0009422 0.3855"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar_front" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar_left_front">
+    <inertial>
+      <origin
+        xyz="-0.00933477420271966 -5.12663011733305E-05 0.00246059506650176"
+        rpy="0 0 0" />
+      <mass
+        value="0.0127001779002961" />
+      <inertia
+        ixx="2.9958345471559E-06"
+        ixy="-3.25666263001565E-14"
+        ixz="6.09366105293054E-07"
+        iyy="2.5484347480629E-06"
+        iyz="3.54128404848535E-14"
+        izz="3.67179403199937E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_left_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_left_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_sonar_left_front"
+    type="fixed">
+    <origin
+      xyz="0.0033527 0.23285 0.3855"
+      rpy="0 0 0.7854" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar_left_front" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sonar_left">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://pal_description_package/meshes/sonar_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_to_sonar_left"
+    type="fixed">
+    <origin
+      xyz="-0.204182430887503 0.25 0.3855"
+      rpy="0 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="sonar_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
