@@ -16,5 +16,5 @@
     name="rviz"
     pkg="rviz"
     type="rviz"
-    args="-d $(find pal_description_package)/urdf.rviz" />
+    args="-d $(find pal_description_package)/config/pal_gmapping_config.rviz" />
 </launch>
